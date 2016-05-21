@@ -24,7 +24,8 @@ Install the python requirements:
 2. Add to apache. Or run as a stand alone service using Bottle.py's built in service. Or your favorite WSGI server.
     - if you use app.py and bottle's built in wsgi, it will start a thread for cwd_checker. Ignore 3.
 3. Set the job monitor service to run.
-    #CRONENTRY
+
+    CRONENTRY
     @reboot /usr/bin/python cwd_checker.py > logfile.log 2>&1;
 
 3. Log in. Bottle starts service at 8080. Your apache conf should start it where you tell it.
