@@ -36,7 +36,7 @@ app.install(plugin)
 
 BaseTemplate.defaults['get_url'] = app.get_url
 
-statuslookup = {'end': 'Run OK', 'fail': 'Failed', 'latent_run': 'Missing Period'}
+statuslookup = {'end': 'Run OK', 'fail': 'Failed', 'latent_run': 'Missing Period', 'sla': 'SLA Time Exceeded'}
 
 
 @app.route('/jobs', apply=[auth_basic(checkauth)])
