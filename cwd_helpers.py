@@ -14,7 +14,8 @@ def delcurrent(db, name):
 def clearalarm(db,name):
     try:
         db.query(Alarms).filter(Alarms.name == name).one()
-        sendalarm(name, 'ok')
+        toemails = getalertemails(db, name)
+        sendalarm(name, 'ok', toemails)
         db.query(Alarms).filter(Alarms.name == name).delete()
         db.commit()
     except NoResultFound:
