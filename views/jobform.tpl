@@ -27,7 +27,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">email</i>
                     <input name="description" id="description" type="text" class="validate" value="{{ job.description if job else '' }}">
-                    <label for="description">Job DescriptionI </label>
+                    <label for="description">Job Description</label>
                 </div>
             </div>
             <div class="row">
