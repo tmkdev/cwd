@@ -9,9 +9,12 @@ if __name__ == '__main__':
     run_event = threading.Event()
     run_event.set()
 
+    app.run(host='0.0.0.0', port=5000)
+    time.sleep(2)
+
     ap = AlarmProcessor(name='AlarmProcessor', kwargs={'run_event': run_event})
     ap.start()
-    app.run(host='0.0.0.0', port=8080)
+
 
     try:
         while 1:

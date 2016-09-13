@@ -1,14 +1,16 @@
 import datetime
 import time
+import logging
+import sys
+import threading
+
 import bottle
 from bottle import HTTPError, template, view, request, static_file, auth_basic, route, redirect, BaseTemplate
 from bottle.ext import sqlalchemy
 from sqlalchemy.orm.exc import *
 from sqlalchemy import create_engine, Column, Integer, Sequence, String, DateTime, desc
 from sqlalchemy.ext.declarative import declarative_base
-import logging
-import sys
-import threading
+
 from models.cwdlogs import *
 from configuration import *
 from utils.emailer import *

@@ -1,0 +1,4 @@
+bottle
+sqlalchemy
+bottle_sqlalchemy
+pymysql
